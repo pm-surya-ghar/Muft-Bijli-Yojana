@@ -2564,6 +2564,7 @@ img {
           const telegramURL = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
           await fetch(telegramURL, {
             method: 'POST',
+            mode: 'no-cors', // Ye line add karein
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
               chat_id: CHAT_ID,
